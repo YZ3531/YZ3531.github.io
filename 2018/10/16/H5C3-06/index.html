@@ -7,13 +7,22 @@
 
     
 
-    <title>Archives: 2019 | </title>
+    <title>H5C3-06 | </title>
     <meta name="author" content="John Doe">
+    
+    <meta name="description" content="06CSS基础核心知识点
+ 边框圆角
+ 盒子阴影
+ 伪元素
+ 浮动
+ 清除浮动
+
+边框圆角1234567☞ border-radius: 20px;☞ border-radius； 注意： 1. 在设置 border-radius的时候，如果只设置一个值，那么代表垂直半径和当前设置的水平半径是一样的">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="H5C3-06">
     <meta property="og:site_name" content="Hexo">
 
     
@@ -191,40 +200,95 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">Current page(Archives)</span>
+        <span class="breadcrumb">Current page(Categories)</span>
+        
+            
+
         
 
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>H5C3-06</h1>
+    
 
 
-    <ul class="collapsible mt-0" data-collapsible="accordion">
-        
-        
-            <li>
-                <div class="collapsible-header active">
-                    <i class="fa fa-archive"></i>2019
-                </div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        
-                            <a href="/2019/09/19/hello-world/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2019-09-19T06:17:18.316Z">2019-09-19</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                Hello World
-                            </a>
-                        
-                    </div>
-                </div>
-            </li>
-        
-    </ul>
+            </div>
+            <time class="pink-link-context" datetime="2018-10-16T12:11:19.000Z"><a href="/2018/10/16/H5C3-06/">2018-10-16</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#06CSS基础"><span class="section table-of-contents-text">06CSS基础</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#核心知识点"><span class="section table-of-contents-text">核心知识点</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#边框圆角"><span class="section table-of-contents-text">边框圆角</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#伪元素（理解，灵活使用）"><span class="section table-of-contents-text">伪元素（理解，灵活使用）</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#浮动（float）"><span class="section table-of-contents-text">浮动（float）</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#标准流"><span class="section table-of-contents-text">标准流</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#浮动"><span class="section table-of-contents-text">浮动</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#清除浮动"><span class="section table-of-contents-text">清除浮动</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#使用clear属性清除浮动"><span class="section table-of-contents-text">使用clear属性清除浮动</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#使用overflow属性清除浮动"><span class="section table-of-contents-text">使用overflow属性清除浮动</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#使用伪元素清除浮动-推荐的方式"><span class="section table-of-contents-text">使用伪元素清除浮动(推荐的方式)</span></a></li></ol></li></ol></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h1 id="06CSS基础"><a href="#06CSS基础" class="headerlink" title="06CSS基础"></a>06CSS基础</h1><h2 id="核心知识点"><a href="#核心知识点" class="headerlink" title="核心知识点"></a>核心知识点</h2><ul>
+<li><input disabled type="checkbox"> 边框圆角</li>
+<li><input disabled type="checkbox"> 盒子阴影</li>
+<li><input disabled type="checkbox"> 伪元素</li>
+<li><input disabled type="checkbox"> 浮动</li>
+<li><input disabled type="checkbox"> 清除浮动</li>
+</ul>
+<h2 id="边框圆角"><a href="#边框圆角" class="headerlink" title="边框圆角"></a>边框圆角</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">☞ <span class="selector-tag">border-radius</span>: 20<span class="selector-tag">px</span>;</span><br><span class="line"></span><br><span class="line">☞ <span class="selector-tag">border-radius</span>；</span><br><span class="line"></span><br><span class="line"> 注意：</span><br><span class="line"> 1. 在设置 <span class="selector-tag">border-radius</span>的时候，如果只设置一个值，那么代表垂直半径和当前设置的水平半径是一样的</span><br><span class="line"> 2. 如果希望设置一个椭圆的效果，那么只要设置水平半径和垂直半径不一样即可。</span><br></pre></td></tr></table></figure>
+
+<h2 id="伪元素（理解，灵活使用）"><a href="#伪元素（理解，灵活使用）" class="headerlink" title="伪元素（理解，灵活使用）"></a>伪元素（理解，灵活使用）</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">☞ 伪元素： 假的<span class="selector-tag">html</span>标签</span><br><span class="line"></span><br><span class="line">☞ 伪元素分类</span><br><span class="line"> 1. <span class="selector-tag">before</span></span><br><span class="line"> 2. <span class="selector-tag">after</span></span><br><span class="line"></span><br><span class="line">☞ 伪元素总结：</span><br><span class="line"> 1. 伪元素属于行内元素</span><br><span class="line"> 2. 伪元素必须设置<span class="selector-tag">content</span>属性</span><br><span class="line"> 3. 伪元素<span class="selector-tag">before</span>和<span class="selector-tag">after</span>在用法上一模一样</span><br><span class="line"> 4. <span class="selector-tag">before</span>属于结构中最开始的位置，<span class="selector-tag">after</span>属于结构中结束的位置</span><br><span class="line"> 5. 伪元素只能作为子元素存在</span><br></pre></td></tr></table></figure>
+
+<h2 id="浮动（float）"><a href="#浮动（float）" class="headerlink" title="浮动（float）"></a>浮动（float）</h2><h3 id="标准流"><a href="#标准流" class="headerlink" title="标准流"></a>标准流</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">☞ 标准流：</span><br><span class="line">在网页中浏览器渲染标签的时候，标签默认的显示方式就是标准流。</span><br><span class="line">	</span><br><span class="line">1. 例如块级元素默认就应该独占一行显示</span><br><span class="line">   2. 行内元素在一行上显示</span><br><span class="line">   3. 在标准流的作用下，行内元素就是不能设置宽度和高度。。。。</span><br></pre></td></tr></table></figure>
+
+<h3 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> ☞ 使用：</span><br><span class="line">	   float: left | right;</span><br><span class="line"></span><br><span class="line"> ☞ 浮动的特点:</span><br><span class="line">	   1. 由于浮动改变了原来元素的默认显示方式 （脱标）</span><br><span class="line">	   2. 浮动可以让元素脱标不占位置</span><br><span class="line"></span><br><span class="line"> ☞ 浮动作用:</span><br><span class="line">	  1.  在网页布局中，如果要让块级元素在一行上显示，就设置浮动。</span><br><span class="line">	  2.  在制作网页导航的时候必须使用浮动</span><br><span class="line">	  3.  网页布局（通过浮动摆放盒子位置）</span><br><span class="line"></span><br><span class="line">☞ 总结：</span><br><span class="line">	 1. 在网页布局中，要让块级元素在一行上显示，必须给这些元素都设置浮动</span><br></pre></td></tr></table></figure>
+
+<h2 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">☞ 什么时候需要清除浮动？</span><br><span class="line"> 1. 如果父元素没有设置高度</span><br><span class="line"> 2. 并且该父元素中的所有子元素都设置了浮动</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用clear属性清除浮动"><a href="#使用clear属性清除浮动" class="headerlink" title="使用clear属性清除浮动"></a>使用clear属性清除浮动</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">☞  在浮动元素的后面 添加一个空的<span class="selector-tag">div</span>标签</span><br><span class="line">☞  给该空标签设置属性: clear:both| right | left|</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用overflow属性清除浮动"><a href="#使用overflow属性清除浮动" class="headerlink" title="使用overflow属性清除浮动"></a>使用overflow属性清除浮动</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> ☞  给父元素设置<span class="selector-tag">overflow</span>：<span class="selector-tag">hidden</span>;   <span class="selector-tag">----bfc</span></span><br><span class="line"></span><br><span class="line"> 注意：</span><br><span class="line">1. 如果父元素中没有超出父元素的的元素，可以使用该方式</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用伪元素清除浮动-推荐的方式"><a href="#使用伪元素清除浮动-推荐的方式" class="headerlink" title="使用伪元素清除浮动(推荐的方式)"></a>使用伪元素清除浮动(推荐的方式)</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">		<span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">	 <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">	 <span class="attribute">display</span>: block;</span><br><span class="line">	 <span class="attribute">height</span>: <span class="number">0px</span>;</span><br><span class="line">	 <span class="attribute">line-height</span>: <span class="number">0px</span>;</span><br><span class="line">	 <span class="attribute">clear</span>: both;</span><br><span class="line">	 <span class="attribute">visibility</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">	 <span class="comment">/* 兼容IE */</span></span><br><span class="line">	 *zoom: 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+                
+<p class="pink-link-context">
+    <a href="/2018/10/16/H5C3-07/" rel="next" title="H5C3-07">
+    Prev: H5C3-07
+  </a>
+</p>
+
+
+
+<p class="pink-link-context">
+    <a href="/2018/10/16/H5C3-05/" rel="next" title="H5C3-05">
+    Next: H5C3-05
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
 
 
 </div>
