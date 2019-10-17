@@ -1,0 +1,643 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>H5C3-03 | </title>
+    <meta name="author" content="John Doe">
+    
+    <meta name="description" content="03CSS基础核心知识点
+ 基础选择器
+ 复合选择器
+ font属性合写
+
+CSS概念123☞ 层叠样式表或者叫级联样式表(英文全称：Cascading  Style  Sheets)。☞ 层叠：指的是css一个特性
+
+CSS语法12345678910111213141516171819☞  选择器">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="H5C3-03">
+    <meta property="og:site_name" content="叶の博客">
+
+    
+    <meta property="og:image" content>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="叶の博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/prettify-tomorrow-night-eighties.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+</html>
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="indigo">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">叶の博客</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            Home
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            Archives
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            Categories
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-reading " href="/reading" >
+                            <i class="fa fa-book "></i>
+                            
+                            Reading
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            About
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            Search
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav indigo darken-1" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="https://static.npmjs.com/c9e19250d48d66f0e9c70c9b3991bbdb.png" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">叶</p>
+                        <p class="desc">非常非常~懒</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    Home
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    Archives
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    Categories
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-reading " href="/reading" >
+                    <i class="fa fa-book "></i>
+                    
+                    Reading
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    About
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    Search
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav indigo darken-1" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/H5C3/">
+                    H5C3 <span class="right">12</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/js/">
+                    js <span class="right">1</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">Search</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper indigo">
+        <span class="breadcrumb">Current page(Categories)</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/H5C3/">H5C3</a>
+
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>H5C3-03</h1>
+    
+
+
+            </div>
+            <time class="pink-link-context" datetime="2015-10-16T12:08:12.000Z"><a href="/2015/10/16/H5C3-03/">2015-10-16</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#03CSS基础"><span class="section table-of-contents-text">03CSS基础</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#核心知识点"><span class="section table-of-contents-text">核心知识点</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#CSS概念"><span class="section table-of-contents-text">CSS概念</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#CSS语法"><span class="section table-of-contents-text">CSS语法</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#CSS书写位置"><span class="section table-of-contents-text">CSS书写位置</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#CSS基础选择器"><span class="section table-of-contents-text">CSS基础选择器</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#标签选择器（重点理解）"><span class="section table-of-contents-text">标签选择器（重点理解）</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#类选择器（重点掌握）"><span class="section table-of-contents-text">类选择器（重点掌握）</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#类选择器命名规范"><span class="section table-of-contents-text">类选择器命名规范</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#类选择器特点"><span class="section table-of-contents-text">类选择器特点</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#ID选择器（理解）"><span class="section table-of-contents-text">ID选择器（理解）</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#通配符选择器（理解）"><span class="section table-of-contents-text">通配符选择器（理解）</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#颜色表示方式-了解"><span class="section table-of-contents-text">颜色表示方式(了解)</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#预定义方式"><span class="section table-of-contents-text">预定义方式</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#十六进制方式-表示任意的颜色"><span class="section table-of-contents-text">十六进制方式[表示任意的颜色]</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#RGB方式-颜色的表示方式"><span class="section table-of-contents-text">RGB方式(颜色的表示方式)</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#RGBA方式"><span class="section table-of-contents-text">RGBA方式</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#font复合属性介绍"><span class="section table-of-contents-text">font复合属性介绍</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#复合选择器"><span class="section table-of-contents-text">复合选择器</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#后代选择器【掌握】"><span class="section table-of-contents-text">后代选择器【掌握】</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#子代选择器【理解】"><span class="section table-of-contents-text">子代选择器【理解】</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#标签指定式选择器【理解】"><span class="section table-of-contents-text">标签指定式选择器【理解】</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#并集选择器【理解】"><span class="section table-of-contents-text">并集选择器【理解】</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#null"><span class="section table-of-contents-text"> </span></a></li></ol></li></ol></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h1 id="03CSS基础"><a href="#03CSS基础" class="headerlink" title="03CSS基础"></a>03CSS基础</h1><h2 id="核心知识点"><a href="#核心知识点" class="headerlink" title="核心知识点"></a>核心知识点</h2><ul>
+<li><input disabled type="checkbox"> 基础选择器</li>
+<li><input disabled type="checkbox"> 复合选择器</li>
+<li><input disabled type="checkbox"> font属性合写</li>
+</ul>
+<h2 id="CSS概念"><a href="#CSS概念" class="headerlink" title="CSS概念"></a>CSS概念</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">☞ 层叠样式表或者叫级联样式表(英文全称：<span class="selector-tag">Cascading</span>  <span class="selector-tag">Style</span>  <span class="selector-tag">Sheets</span>)。</span><br><span class="line"></span><br><span class="line">☞ 层叠：指的是<span class="selector-tag">css</span>一个特性</span><br></pre></td></tr></table></figure>
+
+<h2 id="CSS语法"><a href="#CSS语法" class="headerlink" title="CSS语法"></a>CSS语法</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">☞  </span><br><span class="line">选择器 &#123;</span><br><span class="line">    属性: 值;</span><br><span class="line">    属性: 值;</span><br><span class="line">&#125;</span><br><span class="line">☞ 选择器:  选中标签</span><br><span class="line"></span><br><span class="line">☞ 属性: 通过选中标签,给标签加样式</span><br><span class="line"></span><br><span class="line">☞ 总结<span class="selector-tag">CSS</span>中常见的属性:</span><br><span class="line">		<span class="selector-tag">color</span>属性:  用来设置文字颜色<span class="selector-attr">[前景色]</span></span><br><span class="line">    <span class="selector-tag">font-size</span>属性:  用来设置文字大小</span><br><span class="line">	   <span class="selector-tag">width</span>属性:   用来设置标签宽度</span><br><span class="line">	  <span class="selector-tag">height</span>属性:   用来设置标签高度</span><br><span class="line"> <span class="selector-tag">background-color</span>属性:  用来设置背景颜色</span><br><span class="line"><span class="comment">/* 文字内容居中 */</span></span><br><span class="line"><span class="selector-tag">text-align</span>: <span class="selector-tag">center</span>;   内容居中(文字,图片)</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">text-indent</span>: 2<span class="selector-tag">em</span>;  设置首行缩进</span><br></pre></td></tr></table></figure>
+
+<h2 id="CSS书写位置"><a href="#CSS书写位置" class="headerlink" title="CSS书写位置"></a>CSS书写位置</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">☞ 内嵌式写法: 在<span class="selector-tag">html</span>页面内写<span class="selector-tag">CSS</span>代码 (学习阶段推荐使用)</span><br><span class="line">	&lt;<span class="selector-tag">head</span>&gt;</span><br><span class="line">        &lt;meta charset="UTF-8"&gt;</span><br><span class="line">        &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">        &lt;!<span class="selector-tag">--</span> 内嵌式写法 <span class="selector-tag">--</span>&gt;</span><br><span class="line">        &lt;style type="text/css"&gt;</span><br><span class="line">            <span class="selector-tag">CSS</span>代码</span><br><span class="line">        &lt;/style&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line"></span><br><span class="line">☞ 外联式: 	将<span class="selector-tag">css</span>代码和<span class="selector-tag">html</span>代码分开了(综合项目的时候推荐使用这种方法)</span><br><span class="line">	 1. 新建一个<span class="selector-tag">css</span>文件,文件后缀名是 <span class="selector-class">.css</span></span><br><span class="line">	 2. 通过<span class="selector-tag">link</span>标签将外部的<span class="selector-tag">css</span>文件引入到<span class="selector-tag">html</span>页面中</span><br><span class="line">	</span><br><span class="line">	&lt;link rel="stylesheet" type="text/css" href="test.css"&gt;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">☞行内式:  将<span class="selector-tag">css</span>代码写到标签内部(如果标签要设置的属性比较少,可以考虑使用行内样式写法)</span><br><span class="line">	&lt;p  style="属性: 值;  属性: 值;"&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="CSS基础选择器"><a href="#CSS基础选择器" class="headerlink" title="CSS基础选择器"></a>CSS基础选择器</h2><h3 id="标签选择器（重点理解）"><a href="#标签选择器（重点理解）" class="headerlink" title="标签选择器（重点理解）"></a>标签选择器（重点理解）</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">☞  通过<span class="selector-tag">HTML</span>标签名选中对应的标签</span><br><span class="line"></span><br><span class="line">☞ 语法</span><br><span class="line"><span class="selector-tag">HTMl</span>标签名 &#123;</span><br><span class="line">    属性: 值;</span><br><span class="line">    属性: 值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="类选择器（重点掌握）"><a href="#类选择器（重点掌握）" class="headerlink" title="类选择器（重点掌握）"></a>类选择器（重点掌握）</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> 1. 定义一个类样式</span><br><span class="line">    .自定义类名 &#123;</span><br><span class="line">        属性: 值;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">2. 标签通过<span class="selector-tag">class</span>属性调用类样式</span><br><span class="line"></span><br><span class="line">&lt;p  class="自定义类名"&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="类选择器命名规范"><a href="#类选择器命名规范" class="headerlink" title="类选择器命名规范"></a>类选择器命名规范</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">☞ 定义类名不能以数字开头</span><br><span class="line">☞ 不能以特殊符号开头定义类名</span><br><span class="line">☞ 不推荐使用汉字定义类名</span><br></pre></td></tr></table></figure>
+
+<p><img src="G:/web/CSS/1/assets/1525221052898.png" alt="52522105289"></p>
+<p><img src="G:/web/CSS/1/assets/1525221068439.png" alt="52522106843"></p>
+<p><img src="G:/web/CSS/1/assets/1525221081684.png" alt="52522108168"></p>
+<h4 id="类选择器特点"><a href="#类选择器特点" class="headerlink" title="类选择器特点"></a>类选择器特点</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">☞ 一个类样式可以被任意的标签调用</span><br><span class="line"></span><br><span class="line">☞ 一个标签可以调用多个类样式</span><br><span class="line">&lt;div class="one two "&gt;1&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="ID选择器（理解）"><a href="#ID选择器（理解）" class="headerlink" title="ID选择器（理解）"></a>ID选择器（理解）</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">☞  选中对应的<span class="selector-tag">ID</span></span><br><span class="line"></span><br><span class="line">1. </span><br><span class="line">#自定义<span class="selector-tag">id</span>名  &#123;</span><br><span class="line">    属性: 值;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">2. 标签通过<span class="selector-tag">ID</span>属性调用</span><br><span class="line"></span><br><span class="line">&lt;p id="自定义id名"&gt;&lt;/p&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">例如:</span><br><span class="line"><span class="comment">/* ID选择器 */</span></span><br><span class="line"><span class="selector-id">#div_box</span> &#123;</span><br><span class="line">			<span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">			<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">			<span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line">&lt;div id="div_box"&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">☞ <span class="selector-tag">ID</span>选择器与类选择器的区别:</span><br><span class="line">	 ◆ 一个<span class="selector-tag">id</span>样式只能对应一个标签</span><br><span class="line">     ◆ 一个标签只能调用一个<span class="selector-tag">ID</span>样式</span><br></pre></td></tr></table></figure>
+
+<h3 id="通配符选择器（理解）"><a href="#通配符选择器（理解）" class="headerlink" title="通配符选择器（理解）"></a>通配符选择器（理解）</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">语法:</span><br><span class="line">* &#123;</span><br><span class="line">    属性: 值; </span><br><span class="line">    属性: 值;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">特点:</span><br><span class="line">	将页面中所有的标签都选中</span><br></pre></td></tr></table></figure>
+
+<h2 id="颜色表示方式-了解"><a href="#颜色表示方式-了解" class="headerlink" title="颜色表示方式(了解)"></a>颜色表示方式(了解)</h2><h3 id="预定义方式"><a href="#预定义方式" class="headerlink" title="预定义方式"></a>预定义方式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="十六进制方式-表示任意的颜色"><a href="#十六进制方式-表示任意的颜色" class="headerlink" title="十六进制方式[表示任意的颜色]"></a>十六进制方式[表示任意的颜色]</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+
+<h3 id="RGB方式-颜色的表示方式"><a href="#RGB方式-颜色的表示方式" class="headerlink" title="RGB方式(颜色的表示方式)"></a>RGB方式(颜色的表示方式)</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+
+<h3 id="RGBA方式"><a href="#RGBA方式" class="headerlink" title="RGBA方式"></a>RGBA方式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="font复合属性介绍"><a href="#font复合属性介绍" class="headerlink" title="font复合属性介绍"></a>font复合属性介绍</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">☞ 文字大小:</span><br><span class="line">   <span class="selector-tag">font-size</span>: </span><br><span class="line">☞ 设置文字是否加粗:</span><br><span class="line">font-weight: 700(bold)  | normal(400) </span><br><span class="line"></span><br><span class="line">☞ 设置文字是否斜体显示:</span><br><span class="line">font-style: normal | italic(斜体显示)</span><br><span class="line"></span><br><span class="line">☞ 设置文字字体:</span><br><span class="line"> <span class="selector-tag">font-family</span>: "微软雅黑";</span><br><span class="line"></span><br><span class="line">☞ 设置文字行高: 调整文字的上下间距</span><br><span class="line">  <span class="selector-tag">line-height</span>: 40<span class="selector-tag">px</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">☞ <span class="selector-tag">font</span>属性合写介绍:</span><br><span class="line">	<span class="comment">/* font合写 */</span></span><br><span class="line">	font: 700 italic  30px/100px  "微软雅黑";</span><br><span class="line">	◆<span class="selector-tag">font</span>合写的时候只用<span class="selector-tag">font</span>属性</span><br><span class="line">	◆<span class="selector-tag">font</span>合写的时候,必须设置<span class="selector-tag">font-size</span> 和 <span class="selector-tag">font-family</span></span><br><span class="line">	◆<span class="selector-tag">font</span>合写的时候,<span class="selector-tag">font-size</span>必须在<span class="selector-tag">font-family</span>之前</span><br><span class="line">	◆font合写的时候,如果要设置line-height,那么该属性必须写到 font-size/line-height</span><br></pre></td></tr></table></figure>
+
+<p><img src="G:/web/CSS/1/assets/1525221872132.png" alt="52522187213"></p>
+<h2 id="复合选择器"><a href="#复合选择器" class="headerlink" title="复合选择器"></a>复合选择器</h2><h3 id="后代选择器【掌握】"><a href="#后代选择器【掌握】" class="headerlink" title="后代选择器【掌握】"></a>后代选择器【掌握】</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="子代选择器【理解】"><a href="#子代选择器【理解】" class="headerlink" title="子代选择器【理解】"></a>子代选择器【理解】</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+
+<h3 id="标签指定式选择器【理解】"><a href="#标签指定式选择器【理解】" class="headerlink" title="标签指定式选择器【理解】"></a>标签指定式选择器【理解】</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+
+<h3 id="并集选择器【理解】"><a href="#并集选择器【理解】" class="headerlink" title="并集选择器【理解】"></a>并集选择器【理解】</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+
+<h3 id><a href="#" class="headerlink" title=" "></a> </h3>
+                
+<p class="pink-link-context">
+    <a href="/2015/10/16/H5C3-04/" rel="next" title="H5C3-04">
+    Prev: H5C3-04
+  </a>
+</p>
+
+
+
+<p class="pink-link-context">
+    <a href="/2015/10/16/H5C3-02/" rel="next" title="H5C3-02">
+    Next: H5C3-02
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large pink">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect green" title="Return to top"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="Menu"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    <footer class="page-footer indigo darken-1">
+    
+    <div class="footer-container container">
+        <div class="row">
+            
+            <div class="social-group col m4 s12">
+                <h5 class="white-text">Social</h5>
+                
+                    <a class="social-link" href="http://weibo.com/1956184117" target="_blank">
+                        <i class="fa fa-2x fa-weibo"></i>
+                    </a>
+                
+                    <a class="social-link" href="https://github.com/raytaylorlin" target="_blank">
+                        <i class="fa fa-2x fa-github"></i>
+                    </a>
+                
+                    <a class="social-link" href="/atom.xml" target="_blank">
+                        <i class="fa fa-2x fa-rss"></i>
+                    </a>
+                
+                
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
+    <div class="site-visitors-container white-text">
+        <span>
+            <i class="fa fa-user"></i>
+            <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+        </span>
+        <span>&nbsp;|&nbsp;</span>
+        <span>
+            <i class="fa fa-eye"></i>
+            <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+        </span>
+    </div>
+
+
+            </div>
+            
+
+            
+            <div class="col m8 s12">
+                <h5 class="white-text">Links</h5>
+                
+                    <a class="social-link" href="http://raytaylorlin.com/" target="_blank">raytaylorism主题作者的技术博客</a>
+                
+                    <a class="social-link" href="https://github.com/raytaylorlin" target="_blank">Github地址（测试友情链接）</a>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="footer-copyright pink-link-context">
+        <div class="container">
+            © 2016 example.com, All rights reserved.
+            <p class="right" style="margin-top: 0;">Blog powered by <a href="https://hexo.io">Hexo</a> | Theme <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
+        </div>
+    </div>
+</footer>
+
+
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('pink lighten-2');
+
+            
+            // 添加new标签
+            $('.menu-reading, .menu-about').append('<span class="new badge pink"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>
