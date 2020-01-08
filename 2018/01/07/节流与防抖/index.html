@@ -6,7 +6,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>
-    面试题 |  空欢
+    节流与防抖 |  空欢
   </title>
   
   <link rel="shortcut icon" href="/favicon.ico">
@@ -25,7 +25,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-面试题" class="article article-type-post" itemscope
+  <article id="post-节流与防抖" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -33,7 +33,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  面试题
+  节流与防抖
 </h1>
   
 
@@ -42,14 +42,10 @@
 
     
     <div class="article-meta">
-      <a href="/2014/10/26/面试题/" class="article-date">
-  <time datetime="2014-10-25T16:56:20.000Z" itemprop="datePublished">2014-10-26</time>
+      <a href="/2018/01/07/节流与防抖/" class="article-date">
+  <time datetime="2018-01-07T13:51:55.000Z" itemprop="datePublished">2018-01-07</time>
 </a>
       
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Interview/">Interview</a>
-  </div>
-
     </div>
     
 
@@ -70,46 +66,28 @@
       
 
       
-      <h1 id="HTML-CSS"><a href="#HTML-CSS" class="headerlink" title="HTML+CSS"></a>HTML+CSS</h1><ul>
-<li><p>块级元素水平垂直居中</p>
-<ul>
-<li><p><code>CSS方式</code></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 父盒子设置</span><br><span class="line"><span class="selector-tag">display</span><span class="selector-pseudo">:table-cell</span>;</span><br><span class="line"><span class="selector-tag">text-align</span><span class="selector-pseudo">:center</span>;</span><br><span class="line"><span class="selector-tag">vertical-align</span><span class="selector-pseudo">:middle</span>;</span><br><span class="line">// 块级元素设置</span><br><span class="line"><span class="selector-tag">display</span><span class="selector-pseudo">:inline-block</span>;</span><br><span class="line"><span class="selector-tag">vertical-align</span><span class="selector-pseudo">:middle</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>CSS3方式</code></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 父盒子设置</span><br><span class="line"><span class="selector-tag">position</span><span class="selector-pseudo">:relative</span>;</span><br><span class="line">// 块级元素设置</span><br><span class="line"><span class="selector-tag">position</span><span class="selector-pseudo">:absolute</span>:</span><br><span class="line"><span class="selector-tag">top</span><span class="selector-pseudo">:50</span>%;</span><br><span class="line"><span class="selector-tag">left</span><span class="selector-pseudo">:50</span>%</span><br><span class="line"><span class="selector-tag">transform</span><span class="selector-pseudo">:translate(-50</span>%,<span class="selector-tag">-50</span>%)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>position的属性及作用</p>
-</li>
-<li><p>px/em/rem的区别</p>
-</li>
-<li><p>简述BFC</p>
-</li>
-<li><p>css引入方式，link与@import的区别</p>
-</li>
-<li><p>css reset的作用及使用场景</p>
-</li>
-<li><p>css sprites的使用方式</p>
-</li>
-<li><p>清除浮动的方式</p>
-</li>
-<li><p>简述适应不同分辨率的几种方法</p>
-</li>
-<li><p>简述优雅降级与渐进增强</p>
-</li>
-<li><p>结构与表现分离，简述结构/表现是什么</p>
-</li>
-<li><p>简述对Web语义化的理解</p>
-</li>
-<li><p>css选择器及优先级</p>
-</li>
-<li><p>display：none与visibility：hidden的区别</p>
-</li>
-<li><p>给p标签设置样式，实现字体在IE6为黑色，IE7为红色，其他为绿色</p>
-</li>
-</ul>
+      <h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>关于节流与防抖这个话题是个比较常见的面试题了</p>
+<p>个人观点是觉得其原理都是使用闭包</p>
+<h2 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h2><p>所谓的防抖</p>
+<p>就是指触发事件后在指定时间内函数只能执行一次</p>
+<p>如果未达到指定时间限制又触发事件</p>
+<p>则会重新计算指定时间</p>
+<blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; 场景 ：</span><br><span class="line">&gt; </span><br><span class="line">&gt; 	任务频繁触发的情况下，只有任务触发的间隔超过指定间隔的时候，任务才会执行</span><br><span class="line">&gt; </span><br><span class="line">&gt; 	一般用于输入框实时搜索</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><code>代码</code> ：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 防抖</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">debounce</span>(<span class="params">fn,time</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(timer)&#123;</span><br><span class="line">            clearTimeout(timer)</span><br><span class="line">        &#125;</span><br><span class="line">        timer = setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">            fn.apply(<span class="keyword">this</span>,<span class="built_in">arguments</span>)</span><br><span class="line">        &#125;,time)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="节流"><a href="#节流" class="headerlink" title="节流"></a>节流</h2><p>所谓的节流</p>
+<p>就是指连续触发事件</p>
+<p>但是在指定时间内只执行一次函数</p>
+<p>它会稀释函数的执行频率</p>
+<blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 场景 ：</span><br><span class="line">&gt; 	一般用于scroll事件或者轮播图</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><code>代码</code> : </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 节流</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span>(<span class="params">fn,time</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> canRun = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!canRun)&#123;</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        &#125;</span><br><span class="line">        canRun = <span class="literal">false</span>;</span><br><span class="line">        setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            fn.apply(<span class="keyword">this</span>,<span class="built_in">arguments</span>);</span><br><span class="line">            canRun = <span class="literal">true</span>;</span><br><span class="line">        &#125;,time)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
       <!-- 打赏 -->
@@ -120,7 +98,7 @@
         
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/10/26/面试题/" data-id="ck55ikzbt00086wcwjejuxpr0"
+      <a data-url="http://yoursite.com/2018/01/07/节流与防抖/" data-id="ck55ikzbn00066wcwbkiubj9a"
         class="article-share-link">分享</a>
       
     </footer>
@@ -131,15 +109,20 @@
   
   <nav class="article-nav">
     
-      <a href="/2018/01/07/数组去重/" class="article-nav-link">
+      <a href="/2018/01/07/数组降维/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            数组去重
+            数组降维
           
         </div>
       </a>
     
+    
+      <a href="/2018/01/07/深拷贝与浅拷贝/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">深拷贝与浅拷贝</div>
+      </a>
     
   </nav>
 
